@@ -448,7 +448,7 @@ if [[ $WEB_ONLY =~ $TRUE_REG ]]; then
     PORTS="$WEB_PORT"
     echo -e "\e[92mWeb only mode. Kafka services will be disabled.\e[39m"
     rm -rf /etc/supervisord.d/*
-    cp /usr/local/share/etc/landoop/supervisord.d/supervisord-web-only.conf /etc/supervisord.d/
+    cp /usr/local/share/landoop/etc/supervisord.d/supervisord-web-only.conf /etc/supervisord.d/
     envsubst < /usr/local/share/landoop/etc/fast-data-dev-ui/env-webonly.js > /var/www/env.js
     export RUNTESTS="${RUNTESTS:-0}"
 fi
